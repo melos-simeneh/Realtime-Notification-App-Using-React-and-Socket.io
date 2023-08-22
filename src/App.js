@@ -12,6 +12,7 @@ function App() {
         <>
           <Navbar />
           <Card />
+          <span className="username">{username}</span>
         </>
       ) : (
         <div className="login">
