@@ -24,8 +24,8 @@ const getUser = (username) => {
 io.on("connection", (socket) => {
   console.log("Someone connected");
   socket.on("newUser", (username) => {
-    console.log(onlineUsers);
     addNewUser(username, socket.id);
+    console.log(onlineUsers);
   });
 
   socket.on("sendNotification", ({ senderName, receiverName, type }) => {

@@ -55,9 +55,11 @@ const Navbar = ({ socket }) => {
       </div>
       <div className="notifications">
         {notifications.map((n) => displayNotification(n))}
-        <button className="nButton" onClick={() => handleRead}>
-          Mark as read
-        </button>
+        {notifications.length > 0 && (
+          <button className="nButton" onClick={handleRead}>
+            Mark as read
+          </button>
+        )}
       </div>
     </div>
   );
